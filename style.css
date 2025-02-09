@@ -1,0 +1,57 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+	font-size: 14px;
+    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    background-color: #f0f0f0;
+    margin: 0;
+	background-image: url('img1.png'), url('img2.png'), url('img3.png'), url('bg.png');
+	background-position: top left, top right, bottom right, center;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-size: auto 100vh, auto 60vh, auto 38vh, cover;
+}
+
+img.name {
+	width: 50vw;
+}
+
+h1 {
+    color: #333;
+	font-size: 4rem;
+	color: 
+	text-transform: uppercase;
+}
+
+#matrix {
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+    gap: 4px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+	border-radius: 5px;
+    font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.highlight {
+    background-color: #ffcc00;
+}
