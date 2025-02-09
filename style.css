@@ -23,13 +23,6 @@ img.name {
 	width: 50vw;
 }
 
-h1 {
-    color: #333;
-	font-size: 4rem;
-	color: 
-	text-transform: uppercase;
-}
-
 #matrix {
     display: grid;
     grid-template-columns: repeat(15, 40px);
@@ -44,7 +37,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #fff;
-	border-radius: 5px;
+	border-radius: 8px;
     font-size: 1.5rem;
 	font-weight: bold;
 	color: #333;
@@ -53,5 +46,6 @@ h1 {
 }
 
 .cell.highlight {
-    background-color: #ffcc00;
+    background-color: #FE3230;
+    color: #FFADA9;
 }
