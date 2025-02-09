@@ -13,6 +13,8 @@ const words = [
 
 const matrixSize = 15;
 const matrix = Array.from({ length: matrixSize }, () => Array.from({ length: matrixSize }, () => ''));
+const vietnameseUppercaseWithDiacritics = "AÁÀÃẠĂẮẰẴẶÂẤẦẪẬ B C D Đ EÉÈẼẸÊẾỀỄỆ G H IÍÌĨỊ K L M N OÓÒÕỌÔỐỒỖỘƠỚỜỠỢ P Q R S T UÚÙŨỤƯỨỪỮỰ V X YÝỲỸỴ";
+const vietnameseCharsWithDiacritics = vietnameseUppercaseWithDiacritics.replace(/\s/g, "").split("");
 
 // Hàm điền từ vào ma trận tại vị trí cố định
 function fillWords() {
@@ -32,7 +34,7 @@ function fillWords() {
   for (let i = 0; i < matrixSize; i++) {
     for (let j = 0; j < matrixSize; j++) {
       if (matrix[i][j] === '') {
-        matrix[i][j] = String.fromCharCode(65 + Math.floor(Math.random() * 26)); // A-Z
+        matrix[i][j] = matrix[i][j] = vietnameseCharsWithDiacritics[Math.floor(Math.random() * vietnameseCharsWithDiacritics.length)];
       }
     }
   }
